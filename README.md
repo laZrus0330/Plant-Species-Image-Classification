@@ -1,227 +1,217 @@
 # 🌿 Plant Species Image Classification
 
-## 📌 Project Overview
+### 📌 A. Project Overview<br>
 This project aims to develop an image classification model that can recognize and differentiate 20 related plant species using Google Teachable Machine. A dataset of at least 250 images per species was collected, focusing primarily on leaf-based images captured from different angles and lighting conditions to improve model accuracy and generalization.
 
 The purpose of this model is to automatically identify plant species based on visual features such as leaf shape, vein structure, texture, and overall appearance. This demonstrates how machine learning can be applied to real-world problems in agriculture, environmental monitoring, and plant identification, while showcasing the process of dataset preparation, model training, evaluation, and deployment.
 
----
+#
+### 🌱  B. LEAF-BASED NON-SUCCULENT PLANT Species List
 
-## 🌱 Plant Species List
+### 1. Mango (*Mangifera indica*)
+<img src="Image_Plant_Introduction/mango.png" width="200">
 
-### 1️⃣ Mango (*Mangifera indica*)
-![](Image_Plant_Introduction/mango.png)
+Mango leaves are long, narrow, and lance-shaped with smooth edges. They are glossy dark green when mature and have a prominent central vein.
 
-Mango is a tropical fruit-bearing tree widely cultivated in warm climates. It has long, glossy green leaves and is known for producing sweet, nutritious fruits rich in vitamins A and C.
+#
 
----
+### 2. Banana (*Musa acuminata*)
+<img src="Image_Plant_Introduction/banana.png" width="200">
 
-### 2️⃣ Banana (*Musa acuminata*)
-![](Image_Plant_Introduction/banana.png)
+Banana leaves are large, elongated, and paddle-shaped with parallel venation. They have a smooth texture and often tear naturally along the veins.
 
-Banana is a fast-growing tropical plant characterized by large, broad leaves. It is widely cultivated for its edible fruit and is an important agricultural crop worldwide.
+#
 
----
+### 3. Papaya (*Carica papaya*)
+<img src="Image_Plant_Introduction/papaya.png" width="200">
 
-### 3️⃣ Papaya (*Carica papaya*)
-![](Image_Plant_Introduction/papaya.png)
+Papaya leaves are large and deeply lobed with a palmate structure. They grow on long hollow petioles and have prominent radiating veins.
 
-Papaya is a tropical plant with deeply lobed leaves and a soft trunk. It produces sweet orange fruits and is valued for its nutritional and medicinal properties.
+#
 
----
+### 4. Jackfruit (*Artocarpus heterophyllus*)
+<img src="Image_Plant_Introduction/jackfruit.png" width="200">
 
-### 4️⃣ Jackfruit (*Artocarpus heterophyllus*)
-![](Image_Plant_Introduction/jackfruit.png)
+Jackfruit leaves are thick, oval-shaped, and leathery with smooth margins. They have a glossy dark green surface and a short pointed tip.
 
-Jackfruit is a large tropical tree known for producing the biggest tree-borne fruit. Its leaves are thick, dark green, and oval-shaped.
+#
 
----
+### 5. Durian (*Durio zibethinus*)
+<img src="Image_Plant_Introduction/durian.png" width="200">
 
-### 5️⃣ Durian (*Durio zibethinus*)
-![](Image_Plant_Introduction/durian.png)
+Durian leaves are oblong and elongated with smooth edges. The upper surface is glossy green, while the underside has a golden-brown tint.
 
-Durian is a tropical tree famous for its strong-smelling fruit. It has elongated leaves with a glossy upper surface and a golden-brown underside.
+#
 
----
+### 6. Rambutan (*Nephelium lappaceum*)
+<img src="Image_Plant_Introduction/rambutan.png" width="200">
 
-### 6️⃣ Rambutan (*Nephelium lappaceum*)
-![](Image_Plant_Introduction/rambutan.png)
+Rambutan leaves are compound with multiple leaflets. Each leaflet is oval-shaped, smooth-edged, and has a slightly leathery texture.
 
-Rambutan is a tropical fruit tree with compound leaves and hairy red fruits. It thrives in humid environments.
+#
 
----
+### 7. Lanzones (*Lansium parasiticum*)
+<img src="Image_Plant_Introduction/lanzones.png" width="200">
 
-### 7️⃣ Lanzones (*Lansium parasiticum*)
-![](Image_Plant_Introduction/lanzones.png)
+Lanzones leaves are pinnate and consist of several oval leaflets arranged along a central stem. The leaflets are smooth and dark green.
 
-Lanzones is a tropical tree producing small round fruits. It has pinnate leaves and grows well in Southeast Asian climates.
+#
 
----
+### 8. Guava (*Psidium guajava*)
+<img src="Image_Plant_Introduction/guava.png" width="200">
 
-### 8️⃣ Guava (*Psidium guajava*)
-![](Image_Plant_Introduction/guava.png)
+Guava leaves are oval-shaped with noticeable parallel veins. They have a slightly rough texture and a dull green surface.
 
-Guava is a small tropical tree with oval leaves and aromatic fruits. It is rich in vitamin C and commonly grown in tropical regions.
+#
 
----
+### 9. Cacao (*Theobroma cacao*)
+<img src="Image_Plant_Introduction/cacao.png" width="200">
 
-### 9️⃣ Cacao (*Theobroma cacao*)
-![](Image_Plant_Introduction/cacao.png)
+Cacao leaves are broad, smooth, and elongated with entire margins. Young leaves are reddish before turning glossy green as they mature.
 
-Cacao is the source of chocolate. It has broad, smooth leaves and grows best in tropical rainforests.
+#
 
----
+### 10. Neem (*Azadirachta indica*)
+<img src="Image_Plant_Introduction/neem.png" width="200">
 
-### 🔟 Neem (*Azadirachta indica*)
-![](Image_Plant_Introduction/neem.png)
+Neem leaves are compound and made up of several serrated leaflets. The leaflets are narrow, pointed, and bright green.
 
-Neem is a medicinal tree known for its antibacterial and antifungal properties. It has compound leaves and is widely used in traditional medicine.
+#
 
----
+### 11. Corn (*Zea mays*)
+<img src="Image_Plant_Introduction/corn.png" width="200">
 
-### 1️⃣1️⃣ Corn (*Zea mays*)
-![](Image_Plant_Introduction/corn.png)
+Corn leaves are long, narrow, and blade-like with parallel veins. They grow alternately along the stalk and have smooth edges.
 
-Corn is a staple agricultural crop with long narrow leaves and tall stalks. It is cultivated globally for food and industrial use.
+#
 
----
+### 12. Sugarcane (*Saccharum officinarum*)
+<img src="Image_Plant_Introduction/sugarcane.png" width="200">
 
-### 1️⃣2️⃣ Sugarcane (*Saccharum officinarum*)
-![](Image_Plant_Introduction/sugarcane.png)
+Sugarcane leaves are long and linear with sharp edges and parallel venation. They are attached to thick fibrous stalks.
 
-Sugarcane is a tall grass species used for sugar production. It has long, blade-like leaves and thick fibrous stalks.
+#
 
----
+### 13. Betel (*Piper betle*)
+<img src="Image_Plant_Introduction/betel.png" width="200">
 
-### 1️⃣3️⃣ Betel (*Piper betle*)
-![](Image_Plant_Introduction/betel.png)
+Betel leaves are heart-shaped with smooth edges and a glossy surface. They have distinct branching veins.
 
-Betel is a vine plant with heart-shaped leaves. It is widely used in traditional practices and herbal medicine.
+#
 
----
+### 14. Sweet Potato (*Ipomoea batatas*)
+<img src="Image_Plant_Introduction/sweet_potato.png" width="200">
 
-### 1️⃣4️⃣ Sweet Potato (*Ipomoea batatas*)
-![](Image_Plant_Introduction/sweet_potato.png)
+Sweet potato leaves are heart-shaped or slightly lobed with smooth margins. They have soft textures and visible veins.
 
-Sweet potato is a root crop plant with heart-shaped leaves. It is grown for its edible tuber rich in carbohydrates and vitamins.
+#
 
----
+### 15. Cassava (*Manihot esculenta*)
+<img src="Image_Plant_Introduction/cassava.png" width="200">
 
-### 1️⃣5️⃣ Cassava (*Manihot esculenta*)
-![](Image_Plant_Introduction/cassava.png)
+Cassava leaves are palmately lobed with multiple narrow segments. They are smooth-edged and grow on long petioles.
 
-Cassava is a drought-resistant root crop with palm-like leaves. It is an important food source in tropical regions.
+#
 
----
+### 16. Taro (*Colocasia esculenta*)
+<img src="Image_Plant_Introduction/taro.png" width="200">
 
-### 1️⃣6️⃣ Taro (*Colocasia esculenta*)
-![](Image_Plant_Introduction/taro.png)
+Taro leaves are large, heart-shaped, and have a waxy surface. The veins radiate outward from a central point.
 
-Taro is a tropical plant known for its large heart-shaped leaves. It is cultivated for its edible underground corm.
+#
 
----
+### 17. Eggplant (*Solanum melongena*)
+<img src="Image_Plant_Introduction/eggplant.png" width="200">
 
-### 1️⃣7️⃣ Eggplant (*Solanum melongena*)
-![](Image_Plant_Introduction/eggplant.png)
+Eggplant leaves are broad and slightly lobed with soft hairs. They have a rough texture and visible midrib.
 
-Eggplant is a vegetable plant with broad leaves and purple fruits. It belongs to the nightshade family.
+#
 
----
+### 18. Narra (*Pterocarpus indicus*)
+<img src="Image_Plant_Introduction/narra.png" width="200">
 
-### 1️⃣8️⃣ Narra (*Pterocarpus indicus*)
-![](Image_Plant_Introduction/narra.png)
+Narra leaves are compound with several oval leaflets. The leaflets are smooth, rounded at the tip, and arranged alternately.
 
-Narra is a hardwood tree native to Southeast Asia. It has compound leaves and is valued for its durable timber.
+#
 
----
+### 19. Mahogany (*Swietenia macrophylla*)
+<img src="Image_Plant_Introduction/mahogany.png" width="200">
 
-### 1️⃣9️⃣ Mahogany (*Swietenia macrophylla*)
-![](Image_Plant_Introduction/mahogany.png)
+Mahogany leaves are pinnate and composed of paired leaflets. The leaflets are smooth-edged and elliptical in shape.
 
-Mahogany is a large tropical tree known for its high-quality wood. It has pinnate leaves and is commonly used in furniture making.
+#
 
----
+### 20. Avocado (*Persea americana*)
+<img src="Image_Plant_Introduction/avocado.png" width="200">
 
-### 2️⃣0️⃣ Avocado (*Persea americana*)
-![](Image_Plant_Introduction/avocado.png)
+Avocado leaves are oval to elliptical with smooth margins. They are dark green, slightly leathery, and have a prominent central vein.
 
-Avocado is a fruit-bearing tree with dark green oval leaves. It produces nutrient-rich fruits widely consumed worldwide.
+#
 
----
+## ⚙️ C. Model Training Details
 
-## 📊 Dataset Information
-
-- Total Classes: 20
-- Images per Class: 250–300
-- Total Images: ~5,000+
-- Image Type: Leaf-based plant images
-- Image Size: Default Teachable Machine preprocessing
-
----
-
-## ⚙️ Model Training Details
-
-- Epochs: 30
+- Epochs: 50
 - Batch Size: 16
 - Learning Rate: 0.001
-- Validation Split: Default (Teachable Machine)
+- Number of images per class: 250-300
 
 ### 📸 Training Settings Screenshot
-![Training Settings](training_screenshots/training_settings.png)
+<img src="Training_Screenshot/Training_Model_settings.png" width="700">
 
----
+I used this settings because it is the default and it is much safer.
+#
 
-## 📈 Model Evaluation
+## 📈 D. Model Evaluation
 
-### 🔍 Confusion Matrix
-![Confusion Matrix](evaluation_screenshots/confusion_matrix.png)
+<table>
+<tr>
+<td align="center">
+<img src="Evaluation_Screenshots/Accuracy per epoch.png" width="400"><br>
+<b>Accuracy per Epoch</b>
+</td>
+<td align="center">
+<img src="Evaluation_Screenshots/Loss per epoch.png" width="400"><br>
+<b>Loss per Epoch</b>
+</td>
+</tr>
 
-### 📊 Accuracy Per Class
-![Accuracy Per Class](evaluation_screenshots/accuracy_per_class.png)
+<tr>
+<td align="center">
+<img src="Evaluation_Screenshots/Accuracy per class.png" width="400"><br>
+<b>Accuracy per Class</b>
+</td>
+<td align="center">
+<img src="Evaluation_Screenshots/Confusion Matrix.png" width="400"><br>
+<b>Confusion Matrix</b>
+</td>
+</tr>
+</table>
 
-### ✅ Overall Accuracy
-(Write the percentage here, e.g., 89%)
+## 🧪 E. Model Testing (Preview Section)
 
----
+| Test 1 – Banana | Test 2 – Cassava | Test 3 – Guava | Test 4 – Jackfruit | Test 5 – Lanzones |
+|-----------------|-----------------|----------------|------------------|------------------|
+| ![Test1 – Banana](Preview_Screenshots/Test1_banana.png) | ![Test2 – Cassava](Preview_Screenshots/Test2_cassava.png) | ![Test3 – Guava](Preview_Screenshots/Test3_guava.png) | ![Test4 – Jackfruit](Preview_Screenshots/Test4_jackfruit.png) | ![Test5 – Lanzones](Preview_Screenshots/Test5_lanzones.png) |
 
-## 🧪 Model Testing (Preview Section)
+| Test 6 – Mango | Test 7 – Neem | Test 8 – Papaya | Test 9 – Sweet Potato | Test 10 – Taro |
+|----------------|---------------|----------------|---------------------|----------------|
+| ![Test6 – Mango](Preview_Screenshots/Test6_Mango.png) | ![Test7 – Neem](Preview_Screenshots/Test7_neem_leaf.png) | ![Test8 – Papaya](Preview_Screenshots/Test8_papaya.png) | ![Test9 – Sweet Potato](Preview_Screenshots/Test9_sweet_potato.png) | ![Test10 – Taro](Preview_Screenshots/Test10_taro.png) |
+#
 
-Below are 10 real-time prediction tests:
 
-![Test 1](preview_tests/test1.png)
-![Test 2](preview_tests/test2.png)
-![Test 3](preview_tests/test3.png)
-![Test 4](preview_tests/test4.png)
-![Test 5](preview_tests/test5.png)
-![Test 6](preview_tests/test6.png)
-![Test 7](preview_tests/test7.png)
-![Test 8](preview_tests/test8.png)
-![Test 9](preview_tests/test9.png)
-![Test 10](preview_tests/test10.png)
-
----
-
-## 📦 Exported Model
-
-The trained model was exported in:
-- TensorFlow format
-- Saved in the `exported_model/` folder
-
----
-
-## 🧠 Reflection
+## Reflection
 
 ### 1️⃣ How did the number of images affect accuracy?
 Having 250–300 balanced images per class improved generalization and reduced bias.
 
 ### 2️⃣ Which plants were misclassified?
-(Some species with similar leaf shapes were occasionally confused due to visual similarity.)
+Some species with similar leaf shapes were occasionally confused due to visual similarity like corn and sugarcane.
 
 ### 3️⃣ How did parameter changes affect training?
 Increasing epochs improved accuracy until overfitting began. Batch size 16 gave stable training.
 
 ### 4️⃣ Challenges encountered
-- Finding diverse, non-duplicate images
+- Finding diverse, non-duplicate images, more images
 - Similar-looking plant species
 - Cleaning mislabeled data
 
@@ -231,9 +221,3 @@ Increasing epochs improved accuracy until overfitting began. Batch size 16 gave 
 - Use a more advanced CNN architecture
 - Collect real-world field images
 
----
-
-## 🚀 Tools Used
-- Google Teachable Machine
-- Google Drive
-- GitHub

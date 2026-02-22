@@ -158,7 +158,7 @@ Avocado leaves are oval to elliptical with smooth margins. They are dark green, 
 ### 📸 Training Settings Screenshot
 <img src="Training_Screenshot/Training_Model_settings.png" width="700">
 
-I used this settings because it is the default and it is much safer.
+These settings were chosen because they are the default and considered safer for stable training.
 #
 
 ## 📈 D. Model Evaluation
@@ -201,23 +201,18 @@ I used this settings because it is the default and it is much safer.
 
 ## Reflection
 
-### 1️⃣ How did the number of images affect accuracy?
-Having 250–300 balanced images per class improved generalization and reduced bias.
+### 1. How did the number of images affect accuracy?
+The number of images had a significant effect on accuracy. Having 250–300 balanced images per class helped the model generalize better and reduced bias.
 
-### 2️⃣ Which plants were misclassified?
-Some species with similar leaf shapes were occasionally confused due to visual similarity like corn and sugarcane.
+### 2. Which plants were misclassified?
+Some plant species were occasionally misclassified, particularly those with similar leaf shapes, such as corn and sugarcane, due to their visual resemblance.
 
-### 3️⃣ How did parameter changes affect training?
-Increasing epochs improved accuracy until overfitting began. Batch size 16 gave stable training.
+### 3. How did parameter changes affect training?
+Parameter changes also influenced training. Increasing the number of epochs improved accuracy up to a point, after which overfitting occurred, while using a batch size of 16 provided stable training.
 
-### 4️⃣ Challenges encountered
-- Finding diverse, non-duplicate images, more images
-- Similar-looking plant species
-- Cleaning mislabeled data
+### 4. Challenges encountered
+The main challenges encountered included finding diverse, non-duplicate images, dealing with visually similar plant species, and cleaning mislabeled data.
 
-### 5️⃣ Future Improvements
-- Add background removal
-- Increase dataset diversity
-- Use a more advanced CNN architecture
-- Collect real-world field images
+### 5. Future Improvements
+For future improvements, incorporating background removal, increasing dataset diversity, adopting a more advanced CNN architecture, and collecting real-world field images could enhance model performance.
 
